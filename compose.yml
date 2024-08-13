@@ -1,0 +1,14 @@
+services:
+  php:
+    container_name: server-php
+    build: ./docker
+    restart: always
+    volumes:
+      - ./public:/var/www/html
+      - ./main.php:/var/www/main.php
+      - ./mixi:/var/www/mixi/core
+      - ./handlers:/var/www/mixi/handlers
+      - ./middlewares:/var/www/mixi/middlewares
+      - ./models:/var/www/mixi/models
+    ports:
+      - 80:80
