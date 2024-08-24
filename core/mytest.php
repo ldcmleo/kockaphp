@@ -1,5 +1,5 @@
 <?php
-namespace Mixi\MyTest;
+namespace Core\MyTest;
 
 function Test() {
     return "My test";

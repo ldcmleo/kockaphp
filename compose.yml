@@ -1,14 +1,14 @@
 services:
-  php:
-    container_name: server-php
-    build: ./docker
+  kocka:
+    container_name: kocka-server
+    build: .
     restart: always
     volumes:
       - ./public:/var/www/html
       - ./main.php:/var/www/main.php
-      - ./mixi:/var/www/mixi/core
-      - ./handlers:/var/www/mixi/handlers
-      - ./middlewares:/var/www/mixi/middlewares
-      - ./models:/var/www/mixi/models
+      - ./core:/var/www/app/core
+      - ./handlers:/var/www/app/handlers
+      - ./middlewares:/var/www/app/middlewares
+      - ./models:/var/www/app/models
     ports:
       - 80:80
