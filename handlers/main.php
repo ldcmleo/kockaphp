@@ -1,8 +1,9 @@
 <?php
-namespace Handlers\Main;
-use Model\User;
+$hola = function($a, $b) {
+    return $a + $b;
+};
 
-function mainFunction() {
-    $user = new User("Leonardo", "abc123", "ldcmleo19@email.com");
-    return $user->print();
-}
+
+$mainHandler = function($ctx) {
+    print_r($ctx);
+};

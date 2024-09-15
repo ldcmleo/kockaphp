@@ -1,5 +1,6 @@
 <?php
 define('ROOT', dirname(dirname(__FILE__)) . "/");
+include_once "Kocka.php";
 include_once "mytest.php";
 
 // loading models
